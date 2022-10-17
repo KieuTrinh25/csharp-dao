@@ -7,16 +7,7 @@ namespace Dao
     {
         static void Main(string[] args)
         {
-            ShapeDao shapeDao = new ShapeMySQLImplement();
-
-            Shape c = new Circle(1, 10);
-            shapeDao.insert(c);
-
-            Shape r = new Rect(1, 10, 15);
-            shapeDao.insert(r);
-
-            Shape t = new Triangle(1, 10, 15, 16);
-            shapeDao.insert(t);
+            ShapeDao shapeDao = new ShapeFileImplement();
 
             List<Shape> shapeList = shapeDao.findAll();
             foreach (Shape shape in shapeList)
